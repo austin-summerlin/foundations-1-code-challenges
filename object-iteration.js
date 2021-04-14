@@ -18,8 +18,14 @@ Output:
 }
 */
 
-export function makeMoreScreamingKeys(someObject) {
-    return {};
+export function makeMoreScreamingKeys(someItem) {
+    const screaminKeys = {};
+    for (let keys in someItem) {
+        let value = someItem[keys];
+        let upperCaseKeys = keys.toUpperCase();
+        screaminKeys[upperCaseKeys] = value
+    }
+    return (screaminKeys)
 }
 
 /*
